@@ -32,7 +32,7 @@ e.g.
 * We will start with *execution* pointcuts
     * Applies to *execution* of methods
 
-		execution(modifiers-pattern? return-type-pattern declaring-type-pattern? method-name-pattern(param-pattern) throws-pattern?)
+###### execution(modifiers-pattern? return-type-pattern declaring-type-pattern? method-name-pattern(param-pattern) throws-pattern?)
 
 * modifiers-pattern is optional
 * return-type-pattern is mandatory
