@@ -1,6 +1,6 @@
 # `@Before` Advice
 
-###### This advice runs custom code BEFORE the Target Object method call
+###### This advice runs custom code **BEFORE** the Target Object method call
 
 #### `@Before` Advice - Use Cases
 * **Most common**
@@ -49,22 +49,27 @@ Patterns can make use of wildcards. E.g. * (matches on everything)
 ###### Examples
 1. *Match on method names*
     * Match only **addAccount()**  method in **AccountDAO** class
-    `@Before(execution(public void com.luv2code.aopdemo.dao.AccountDAO.addAccount()))`
+    >>`@Before(execution(public void com.luv2code.aopdemo.dao.AccountDAO.addAccount()))`
+    
     * Match any **addAccount()** method in **any** class
-    `@Before(execution(public void addAccount()))`
+    >>`@Before(execution(public void addAccount()))`
+    
     * Match methods **starting** with **add** in **any** class
-    `@Before(execution(public void add*()))`
+    >>`@Before(execution(public void add*()))`
+    
     * Use wildcards on modifiers and return type
-    `@Before(execution(* processCreditCard*()))`
+    >>`@Before(execution(* processCreditCard*()))`
 
 2. *Match on method parameters*
     * Match **addAccount** methods with **no arguments**
-    `@Before(execution(* addAccount()))`
+    >>`@Before(execution(* addAccount()))`
+    
     * Match **addAccount** methods that have **Account** param
-    `@Before(execution(* addAccount(com.luv2code.aopdemo.Account)))`
+    >>`@Before(execution(* addAccount(com.luv2code.aopdemo.Account)))`
+    
     * Match **addAccount** methods with **any number of arguements**
-    `@Before(execution(* addAccount(..)))`
+    >>`@Before(execution(* addAccount(..)))`
     
 3. *Match on methods in a package*
     * Match any method in our DAO package: **com.luv2code.aopdemo.dao**
-    `@Before(execution(* com.luv2code.aopdemo.dao.*.*(..)))`
+    >>`@Before(execution(* com.luv2code.aopdemo.dao.*.*(..)))`
