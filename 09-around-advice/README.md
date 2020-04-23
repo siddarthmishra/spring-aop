@@ -30,7 +30,7 @@ when using @Around advice,
 
 ###### Example 1 : Happy path of `@Around`
 
-<img src="images/sequence around 1.PNG" width="400", height="250">
+<img src="images/sequence-around-1.PNG" width="400" height="250">
 
 ```
 @Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
@@ -48,7 +48,7 @@ public Object aroundGetFortune(ProceedingJoinPoint proceedingJoinPoint) throws T
 
 ###### Example 2 : Swallow the exception using `@Around`
 
-<img src="images/sequence around with exception 1.PNG" width="400", height="250">
+<img src="images/sequence-around-with-exception-1.PNG" width="400" height="250">
 
 ```
 @Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
@@ -71,7 +71,7 @@ public Object aroundGetFortune(ProceedingJoinPoint proceedingJoinPoint) throws T
 
 ###### Example 3 : Re-throw the exception using `@Around`
 
-<img src="images/sequence around with exception rethrow 1.PNG" width="400", height="250">
+<img src="images/sequence-around-with-exception-rethrow-1.PNG" width="400" height="250">
 
 ```
 @Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
@@ -93,7 +93,7 @@ public Object aroundGetFortune(ProceedingJoinPoint proceedingJoinPoint) throws T
 
 Target Object method is not invoked and the result returned is `null`
 
-<img src="images/sequence around 2.PNG" width="400", height="250">
+<img src="images/sequence-around-2.PNG" width="400" height="250">
 
 ```
 @Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
